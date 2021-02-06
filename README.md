@@ -1,2 +1,4 @@
 # dotfiles
-Here you can find all of my dotfiles. This is a new repository I created following the "bare git repository" approach i found in [DistroTube's video](https://www.youtube.com/watch?v=tBoLDpTWVOM) and originally in [Attlassian's tutorial](https://www.youtube.com/watch?v=tBoLDpTWVOM).
+Here is my new repository for dotfiles (the previous one was [here](https://bitbucket.org/marcin_gazda/dotfiles)).
+I've switched to the "bare git repository" approach I found in [DistroTube's video](https://www.youtube.com/watch?v=tBoLDpTWVOM) and originally in [Attlassian's tutorial](https://www.youtube.com/watch?v=tBoLDpTWVOM). Check one or the other to learn about the details.
+BTW, my aliases assume that this repository is cloned to ~/.dotfiles directory.
