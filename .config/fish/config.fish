@@ -18,8 +18,14 @@ if test -d $HOME/.local/bin
     set -x PATH "$HOME/.local/bin:$PATH"
 end
 
+### Use nvim instead of vim
+alias vim=nvim
+
 ### 'Bare git repo for dotfiles'
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+### After quitting ranger stay in its current directory
+alias ranger='ranger --choosedir=$HOME/.rangerdir; cd (cat $HOME/.rangerdir)'
 
 ### Launch starship prompt
 starship init fish | source

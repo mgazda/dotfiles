@@ -33,13 +33,14 @@ set foldmethod=syntax
 set gdefault
 set hlsearch
 set ignorecase
-set smartcase
 set incsearch
 set magic
+set mouse=a
 set nowrap
 set number
 set scrolloff=10
 set shiftwidth=2
+set smartcase
 set tabstop=2
 set undofile
 
