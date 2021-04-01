@@ -18,6 +18,11 @@ if test -d $HOME/.local/bin
     set -x PATH "$HOME/.local/bin:$PATH"
 end
 
+### do the same for Homebrew's bin dir on apple silicon
+if test -d /opt/homebrew/bin
+    set -x PATH /opt/homebrew/bin $PATH
+end
+
 ### Use nvim instead of vim
 alias vim=nvim
 
