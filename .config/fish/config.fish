@@ -15,7 +15,7 @@ set -x LS_COLORS 'ow=34'
 
 ### set PATH so it includes user's private bin if it exists
 if test -d $HOME/.local/bin
-    set -x PATH "$HOME/.local/bin:$PATH"
+    set -x PATH $HOME/.local/bin $PATH
 end
 
 ### do the same for Homebrew's bin dir on apple silicon
@@ -34,3 +34,9 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; cd (cat $HOME/.rangerdir)'
 
 ### Launch starship prompt
 starship init fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
