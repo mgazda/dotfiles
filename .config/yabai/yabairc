@@ -43,6 +43,10 @@ yabai -m rule --add app="^System Preferences$" manage=off
 # unmanage activity monitor
 yabai -m rule --add app="^Activity Monitor$" manage=off
 
+# unmanage Dwarf Fortress
+yabai -m rule --add app="^dwarfort\.exe$" manage=off
+
 # refresh my Übersicht bar when the space changes
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht.app\" to refresh widget id \"spaces-coffee\"'"
+    action="osascript -e 'tell application \"Übersicht.app\" to refresh widget id \"simple-bar-spaces-jsx\"'"
+    #action="osascript -e 'tell application \"Übersicht.app\" to refresh widget id \"spaces-coffee\"'"

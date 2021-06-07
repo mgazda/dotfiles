@@ -6,12 +6,18 @@
 alt - j : yabai -m window --focus next || yabai -m window --focus first
 alt - k : yabai -m window --focus prev || yabai -m window --focus last
 
+alt + shift - j : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+alt + shift - k : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
 # move window
 alt + ctrl - j : yabai -m window --swap next || yabai -m window --swap first
 alt + ctrl - k : yabai -m window --swap prev || yabai -m window --swap last
 
+# stack recent window onto current
+alt + ctrl + shift - s : yabai -m window --stack recent
+
 # balance size of windows
-alt + ctrl - 0 : yabai -m space --balance
+alt + ctrl - 0x18 : yabai -m space --balance
 
 alt + ctrl - h : yabai -m window --ratio rel:-0.1
 alt + ctrl - l : yabai -m window --ratio rel:0.1
@@ -55,14 +61,16 @@ alt + ctrl - s : yabai -m space --layout stack
 
 #rename active space
 alt + ctrl - n : yabai -m space --label (osascript -e 'text returned of (display dialog "Label for the current space:" default answer "")');\
-                 osascript -e 'tell application "Übersicht.app" to refresh'
+                 osascript -e 'tell application "Übersicht.app" to refresh widget id "simple-bar-spaces-jsx"'
+#osascript -e 'tell application "Übersicht.app" to refresh'
 
 #
 # Starting apps
 #
 
 # Terminal
-alt + ctrl + shift - return : open -a Terminal ~
+alt + ctrl + shift - return : osascript -e 'tell application "iTerm2" to create window with default profile'
+#alt + ctrl + shift - return : open -a Terminal ~
 #alt + ctrl + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~
 
 # Moto suite
