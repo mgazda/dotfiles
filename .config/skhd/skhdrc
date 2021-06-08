@@ -62,7 +62,6 @@ alt + ctrl - s : yabai -m space --layout stack
 #rename active space
 alt + ctrl - n : yabai -m space --label (osascript -e 'text returned of (display dialog "Label for the current space:" default answer "")');\
                  osascript -e 'tell application "Übersicht.app" to refresh widget id "simple-bar-spaces-jsx"'
-#osascript -e 'tell application "Übersicht.app" to refresh'
 
 #
 # Starting apps
