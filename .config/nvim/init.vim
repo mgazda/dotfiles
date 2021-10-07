@@ -49,6 +49,7 @@ let mapleader="\\"
 
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>w :setlocal wrap!<CR>
+nnoremap <leader>r :setlocal relativenumber!<CR>
 
 noremap <C-l> gt
 noremap <C-h> gT
