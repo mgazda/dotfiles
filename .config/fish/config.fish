@@ -40,3 +40,9 @@ starship init fish | source
 eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+### Setup Java
+set -x JAVA_HOME /opt/homebrew/opt/openjdk@11
+fish_add_path $JAVA_HOME/bin
+
+### Add path to yabai builtfrom the source
+fish_add_path $HOME/Code/_Others/yabai/bin
