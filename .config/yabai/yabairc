@@ -59,6 +59,8 @@ yabai -m rule --add app="^dwarfort\.exe$" manage=off
 yabai -m rule --add app="^Finder$" title="^Copy$" manage=off
 yabai -m rule --add app="^Finder$" title=".* Info$" manage=off
 
+#unmanage Godot
+yabai -m rule --add app="^Godot$" manage=off
 
 #
 # Übersicht spaces bar refresh
