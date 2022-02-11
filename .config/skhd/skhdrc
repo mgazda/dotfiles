@@ -16,7 +16,7 @@ alt + ctrl - k : yabai -m window --swap prev || yabai -m window --swap last
 # stack recent window onto current
 alt + ctrl + shift - s : yabai -m window --stack recent
 
-# balance size of windows
+# balance size of windows (ctrl alt =)
 alt + ctrl - 0x18 : yabai -m space --balance
 
 alt + ctrl - h : yabai -m window --ratio rel:-0.1
@@ -47,6 +47,9 @@ alt - t : yabai -m window --toggle float;\
 
 # toggle window zoom
 alt - return : yabai -m window --toggle zoom-fullscreen
+
+# toggle window opacity
+alt + ctrl - o: yabai -m window --opacity 1.0
 
 # rotate and flip
 alt + ctrl - left  : yabai -m space --rotate 90
