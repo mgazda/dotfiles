@@ -13,6 +13,10 @@ alt + shift - k : yabai -m window --focus stack.prev || yabai -m window --focus 
 alt + ctrl - j : yabai -m window --swap next || yabai -m window --swap first
 alt + ctrl - k : yabai -m window --swap prev || yabai -m window --swap last
 
+# warp window
+alt + ctrl + shift - j : yabai -m window --warp next || yabai -m window --warp first
+alt + ctrl + shift - k : yabai -m window --warp prev || yabai -m window --warp last
+
 # stack recent window onto current
 alt + ctrl + shift - s : yabai -m window --stack recent
 
@@ -41,9 +45,15 @@ alt + ctrl - w : yabai -m window --display 2
 # close window
 alt + ctrl - c : yabai -m window --close
 
-#(un)float window
-alt - t : yabai -m window --toggle float;\
+# (un)float window
+alt - f : yabai -m window --toggle float; \
           yabai -m window --grid 4:4:1:1:2:2
+
+# put window to middle (grid rows:cols:start-x:start-y:width:height
+alt - m : yabai -m window --grid 64:6:1:1:4:62
+
+# toggle window sticky
+alt - d : yabai -m window --toggle sticky
 
 # toggle window zoom
 alt - return : yabai -m window --toggle zoom-fullscreen
@@ -56,6 +66,8 @@ alt + ctrl - left  : yabai -m space --rotate 90
 alt + ctrl - right : yabai -m space --rotate 270
 alt + ctrl - up    : yabai -m space --mirror x-axis
 alt + ctrl - down  : yabai -m space --mirror y-axis
+
+alt + ctrl - i  : yabai -m window --toggle split
 
 # change layouts
 alt + ctrl - b : yabai -m space --layout bsp

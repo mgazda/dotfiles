@@ -43,3 +43,11 @@ eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv |
 ### Setup Java
 set -x JAVA_HOME /opt/homebrew/opt/openjdk@11
 fish_add_path $JAVA_HOME/bin
+
+### Show system info
+if which neofetch > /dev/null
+  neofetch
+end
+
+### Add rust to the path
+fish_add_path /Users/wizz/.cargo/bin

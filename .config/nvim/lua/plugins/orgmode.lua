@@ -12,10 +12,23 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {'~/2ndBrain/*'},
+  org_agenda_files = {'~/2ndBrain/agenda/*'},
   org_default_notes_file = '~/2ndBrain/refile.org',
 
   org_hide_emphasis_markers = true,
+
+  win_split_mode = 'vsplit',
+
+  org_capture_templates = {
+    d = {
+      description = 'Daily log',
+      template = '\n* %u Daily log\n** %^{Headline}%?',
+    },
+    l = {
+      description = 'Log entry',
+      template = '** %^{Headline}%?',
+    },
+  },
 })
 
 require'cmp'.setup({
@@ -24,5 +37,5 @@ require'cmp'.setup({
   }
 })
 
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = 'c'
+vim.opt.conceallevel = 3
+vim.opt.concealcursor = 'nc'
